@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="領地權限等級有三種不同的領地權限，分別為： 建築權限 說明：可以在領地內擺放/破壞方塊的權限（最高的領地權限） 註解：包含箱子（containertrust）和操作（accesstrust）的權限。 指令：/trust &amp;lt;玩家 ID&amp;gt;  箱子權限 說明：可以使用合成臺、可儲物方塊（儲物箱、漏斗、界伏盒、熔爐、釀造臺…）和所有動物互動（裝牛奶、騎乘、剪羊毛、剪蘑菇…）的權限 註解：包含操">
+<meta property="og:type" content="website">
+<meta property="og:title" content="領地權限">
+<meta property="og:url" content="https://feelsogood.woolninesun.me/griefprevention/permission.html">
+<meta property="og:site_name" content="FSG wiki">
+<meta property="og:description" content="領地權限等級有三種不同的領地權限，分別為： 建築權限 說明：可以在領地內擺放/破壞方塊的權限（最高的領地權限） 註解：包含箱子（containertrust）和操作（accesstrust）的權限。 指令：/trust &amp;lt;玩家 ID&amp;gt;  箱子權限 說明：可以使用合成臺、可儲物方塊（儲物箱、漏斗、界伏盒、熔爐、釀造臺…）和所有動物互動（裝牛奶、騎乘、剪羊毛、剪蘑菇…）的權限 註解：包含操">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://feelsogood.woolninesun.me/uploads/griefprevention/permission_relation.png">
+<meta property="og:updated_time" content="2019-08-29T14:09:28.920Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="領地權限">
+<meta name="twitter:description" content="領地權限等級有三種不同的領地權限，分別為： 建築權限 說明：可以在領地內擺放/破壞方塊的權限（最高的領地權限） 註解：包含箱子（containertrust）和操作（accesstrust）的權限。 指令：/trust &amp;lt;玩家 ID&amp;gt;  箱子權限 說明：可以使用合成臺、可儲物方塊（儲物箱、漏斗、界伏盒、熔爐、釀造臺…）和所有動物互動（裝牛奶、騎乘、剪羊毛、剪蘑菇…）的權限 註解：包含操">
+<meta name="twitter:image" content="https://feelsogood.woolninesun.me/uploads/griefprevention/permission_relation.png">
+  <link rel="canonical" href="https://feelsogood.woolninesun.me/griefprevention/permission">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: false,
+    isPage: true,
+    isArchive: false
+  };
+</script>
+
+  <title>領地權限 | FSG wiki</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">FSG wiki</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-最新消息">
+      
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-bullhorn"></i> <br>最新消息</a>
+
+  </li>
+      
+      
+      
+        
+          
+          
+          
+            
+            
+    
+  
+  <li class="menu-item menu-item-領地插件">
+      
+    
+      
+    
+
+    <a href="/griefprevention/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>領地插件</a>
+
+  </li>
+
+
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+      
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+    
+    
+      
+      
+    
+      
+      
+
+        
+        
+        
+
+          
+          <ul id="sub-menu" class="sub-menu menu">
+          
+            
+            
+              
+              
+                
+              
+            
+          
+            
+            
+              
+              
+                
+                  
+                
+                
+    
+  
+  <li class="menu-item menu-item-基礎教學">
+      
+    
+      
+    
+
+    <a href="/griefprevention/basic.html" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>基礎教學</a>
+
+  </li>
+
+
+              
+            
+          
+            
+            
+              
+              
+                
+                  
+                
+                
+    
+  
+  <li class="menu-item menu-item-領地權限">
+      
+    
+      
+    
+
+    <a href="/griefprevention/permission.html" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>領地權限</a>
+
+  </li>
+
+
+              
+            
+          
+            
+            
+              
+              
+                
+                  
+                
+                
+    
+  
+  <li class="menu-item menu-item-進階教學">
+      
+    
+      
+    
+
+    <a href="/griefprevention/advanced.html" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>進階教學</a>
+
+  </li>
+
+
+              
+            
+          
+            
+            
+              
+              
+                
+                  
+                
+                
+    
+  
+  <li class="menu-item menu-item-相關資訊">
+      
+    
+      
+    
+
+    <a href="/griefprevention/infos.html" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>相關資訊</a>
+
+  </li>
+
+
+              
+            
+          
+          </ul>
+          
+
+          
+          
+            
+            
+          
+            
+            
+
+              
+                
+                
+                  
+                
+                
+              
+                
+                
+                
+              
+                
+                
+                
+              
+                
+                
+                
+              
+                
+                
+                
+              
+
+            
+          
+          
+
+        
+        
+
+      
+    
+    
+
+  
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">領地權限
+
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+          <h1 id="領地權限等級"><a href="#領地權限等級" class="headerlink" title="領地權限等級"></a>領地權限等級</h1><p>有三種不同的領地權限，分別為：</p>
+<h2 id="建築權限"><a href="#建築權限" class="headerlink" title="建築權限"></a>建築權限</h2><ul>
+<li>說明：可以在領地內擺放/破壞方塊的權限（最高的領地權限）</li>
+<li>註解：包含箱子（containertrust）和操作（accesstrust）的權限。</li>
+<li>指令：<code>/trust &lt;玩家 ID&gt;</code></li>
+</ul>
+<h2 id="箱子權限"><a href="#箱子權限" class="headerlink" title="箱子權限"></a>箱子權限</h2><ul>
+<li>說明：可以使用合成臺、可儲物方塊（儲物箱、漏斗、界伏盒、熔爐、釀造臺…）和所有動物互動（裝牛奶、騎乘、剪羊毛、剪蘑菇…）的權限</li>
+<li>註解：包含操作（accesstrust）的權限。</li>
+<li>指令：<code>/containertrust &lt;玩家 ID&gt;</code></li>
+</ul>
+<h2 id="操作權限"><a href="#操作權限" class="headerlink" title="操作權限"></a>操作權限</h2><ul>
+<li>說明：可以操作領地內的按鈕、拉桿和床的權限</li>
+<li>指令：<code>/accesstrust &lt;玩家 ID&gt;</code></li>
+</ul>
+<div class="showimg"><img src="/uploads/griefprevention/permission_relation.png"></div>
+
+<h2 id="管理權限"><a href="#管理權限" class="headerlink" title="管理權限"></a>管理權限</h2><ul>
+<li>說明：這個領地權限比較特別，可以讓該玩家可以分享他在該領地的權限給他人，比如說給與一位玩家箱子（containertrust）和管理（permissiontrust）的權限，那這名玩家也可以給與其他玩家該領地的箱子權限，但不能給與建築權限。</li>
+<li>指令：<code>/permissiontrust &lt;玩家 ID&gt;</code></li>
+</ul>
+<h1 id="查詢領地權限列表"><a href="#查詢領地權限列表" class="headerlink" title="查詢領地權限列表"></a>查詢領地權限列表</h1><blockquote>
+<p>需要物品：<span class="label info">知道如何打指令的大腦</span> x1</p>
+</blockquote>
+<ul>
+<li>步驟 1: 站在要給與領地權限的個人領地上（站在領地範圍內）。</li>
+<li>步驟 2: 在聊天視窗輸入 <code>/trustlist</code>。</li>
+<li>步驟 3: 打完指令後聊天視窗就會顯示該領地權限列表。訊息大致上如下：<ul>
+<li><div style="
+    background: rgba(1,1,1,.7);
+    padding: 2px 5px;
+    border-radius: .2em;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    color: #55FFFF;
+  "><span style="color: #FFAA00;">> [玩家名]</span>
+<span style="color: #FFFF55;">> [玩家名]</span>
+<span style="color: #55FF55;">> [玩家名]</span>
+<span style="color: #5555FF;">> [玩家名]</span>
+<span style="color: #FFAA00;">管理</span> <span style="color: #FFFF55;">建築</span> <span style="color: #55FF55;">箱子</span> <span style="color: #5555FF;">操作</span>
+Explicit permissions here:</div>
+
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="給與領地權限"><a href="#給與領地權限" class="headerlink" title="給與領地權限"></a>給與領地權限</h1><blockquote>
+<p>需要物品：<span class="label info">知道如何打指令的大腦</span> x1</p>
+</blockquote>
+<ul>
+<li>步驟 1: 站在要給與領地權限的個人領地上（站在領地範圍內）。</li>
+<li>步驟 2: 在聊天視窗輸入 <code>/trust &lt;玩家ID&gt;</code>。（或其他領地權限相應的命令）</li>
+<li>步驟 3: 打完指令後該玩家就會獲得相對應領地權限，可用 <code>/trustlist</code> 命令確認。</li>
+</ul>
+<div class="note info">
+            <p>可用 public 表示所有玩家。例如： <code>/trust public</code></p>
+          </div>
+
+<h1 id="移除領地權限"><a href="#移除領地權限" class="headerlink" title="移除領地權限"></a>移除領地權限</h1><blockquote>
+<p>需要物品：<span class="label info">知道如何打指令的大腦</span> x1</p>
+</blockquote>
+<h2 id="移除指定玩家在該領地的權限"><a href="#移除指定玩家在該領地的權限" class="headerlink" title="移除指定玩家在該領地的權限"></a>移除指定玩家在該領地的權限</h2><ul>
+<li>步驟 1: 站在要給與領地權限的個人領地上（站在領地範圍內）。</li>
+<li>步驟 2: 在聊天視窗輸入 <code>/untrust &lt;玩家ID&gt;</code>。</li>
+<li>步驟 3: 打完指令後就會移除該玩家在該領地的所有權限（涵蓋管理、建築、箱子、操作），可用 <code>/trustlist</code> 命令確認。<h2 id="移除所有玩家在該領地的權限"><a href="#移除所有玩家在該領地的權限" class="headerlink" title="移除所有玩家在該領地的權限"></a>移除所有玩家在該領地的權限</h2></li>
+<li>步驟 1: 站在要給與領地權限的個人領地上（站在領地範圍內）。</li>
+<li>步驟 2: 在聊天視窗輸入 <code>/untrust <span class="label danger">all</span></code>。</li>
+<li>步驟 3: 打完指令後就會移除所有玩家在該領地的所有權限（涵蓋管理、建築、箱子、操作），可用 <code>/trustlist</code> 命令確認。</li>
+</ul>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#領地權限等級"><span class="nav-text">領地權限等級</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#建築權限"><span class="nav-text">建築權限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#箱子權限"><span class="nav-text">箱子權限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作權限"><span class="nav-text">操作權限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理權限"><span class="nav-text">管理權限</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查詢領地權限列表"><span class="nav-text">查詢領地權限列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#給與領地權限"><span class="nav-text">給與領地權限</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#移除領地權限"><span class="nav-text">移除領地權限</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#移除指定玩家在該領地的權限"><span class="nav-text">移除指定玩家在該領地的權限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移除所有玩家在該領地的權限"><span class="nav-text">移除所有玩家在該領地的權限</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description">feelsogood.ddns.net</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        <a href="https://discordapp.com/invite/GvK5EKR" title="Discord &rarr; https://discordapp.com/invite/GvK5EKR" rel="noopener" target="_blank">Discord</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        <a href="https://www.facebook.com/828278847317176" title="Facebook &rarr; https://www.facebook.com/828278847317176" rel="noopener" target="_blank">Facebook</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">feelsogood admin</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+<script src="/js/utils.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="分割子領地 需要物品：金鏟 x1 + 知道如何打指令的大腦 x1   分割出來的子領地，可以獨立於主要領地，額外給與或移除其他玩家的領地權限。 例如花鑽石請人幫忙鋪地，可以把需要鋪地的範圍分割出一塊子領地，只有子領地給與幫忙的玩家建築的領地權限。就可以保護好主領地上的建築和財產。    步驟 1在聊天視窗輸入 /subdivideclaims 進入子領地分割模式。成功的話聊天室會出現以下句子：">
+<meta property="og:type" content="website">
+<meta property="og:title" content="進階教學">
+<meta property="og:url" content="https://feelsogood.woolninesun.me/griefprevention/advanced.html">
+<meta property="og:site_name" content="FSG wiki">
+<meta property="og:description" content="分割子領地 需要物品：金鏟 x1 + 知道如何打指令的大腦 x1   分割出來的子領地，可以獨立於主要領地，額外給與或移除其他玩家的領地權限。 例如花鑽石請人幫忙鋪地，可以把需要鋪地的範圍分割出一塊子領地，只有子領地給與幫忙的玩家建築的領地權限。就可以保護好主領地上的建築和財產。    步驟 1在聊天視窗輸入 /subdivideclaims 進入子領地分割模式。成功的話聊天室會出現以下句子：">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://feelsogood.woolninesun.me/uploads/griefprevention/subclaim_step2.png">
+<meta property="og:image" content="https://feelsogood.woolninesun.me/uploads/griefprevention/subclaim_step3.png">
+<meta property="og:image" content="https://feelsogood.woolninesun.me/uploads/griefprevention/subclaim_step4.png">
+<meta property="og:updated_time" content="2019-08-29T14:20:15.665Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="進階教學">
+<meta name="twitter:description" content="分割子領地 需要物品：金鏟 x1 + 知道如何打指令的大腦 x1   分割出來的子領地，可以獨立於主要領地，額外給與或移除其他玩家的領地權限。 例如花鑽石請人幫忙鋪地，可以把需要鋪地的範圍分割出一塊子領地，只有子領地給與幫忙的玩家建築的領地權限。就可以保護好主領地上的建築和財產。    步驟 1在聊天視窗輸入 /subdivideclaims 進入子領地分割模式。成功的話聊天室會出現以下句子：">
+<meta name="twitter:image" content="https://feelsogood.woolninesun.me/uploads/griefprevention/subclaim_step2.png">
+  <link rel="canonical" href="https://feelsogood.woolninesun.me/griefprevention/advanced">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: false,
+    isPage: true,
+    isArchive: false
+  };
+</script>
+
+  <title>進階教學 | FSG wiki</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">FSG wiki</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-最新消息">
+      
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-bullhorn"></i> <br>最新消息</a>
+
+  </li>
+      
+      
+      
+        
+          
+          
+          
+            
+            
+    
+  
+  <li class="menu-item menu-item-領地插件">
+      
+    
+      
+    
+
+    <a href="/griefprevention/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>領地插件</a>
+
+  </li>
+
+
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+      
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+    
+    
+      
+      
+    
+      
+      
+
+        
+        
+        
+
+          
+          <ul id="sub-menu" class="sub-menu menu">
+          
+            
+            
+              
+              
+                
+              
+            
+          
+            
+            
+              
+              
+                
+                  
+                
+                
+    
+  
+  <li class="menu-item menu-item-基礎教學">
+      
+    
+      
+    
+
+    <a href="/griefprevention/basic.html" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>基礎教學</a>
+
+  </li>
+
+
+              
+            
+          
+            
+            
+              
+              
+                
+                  
+                
+                
+    
+  
+  <li class="menu-item menu-item-領地權限">
+      
+    
+      
+    
+
+    <a href="/griefprevention/permission.html" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>領地權限</a>
+
+  </li>
+
+
+              
+            
+          
+            
+            
+              
+              
+                
+                  
+                
+                
+    
+  
+  <li class="menu-item menu-item-進階教學">
+      
+    
+      
+    
+
+    <a href="/griefprevention/advanced.html" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>進階教學</a>
+
+  </li>
+
+
+              
+            
+          
+            
+            
+              
+              
+                
+                  
+                
+                
+    
+  
+  <li class="menu-item menu-item-相關資訊">
+      
+    
+      
+    
+
+    <a href="/griefprevention/infos.html" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>相關資訊</a>
+
+  </li>
+
+
+              
+            
+          
+          </ul>
+          
+
+          
+          
+            
+            
+          
+            
+            
+
+              
+                
+                
+                  
+                
+                
+              
+                
+                
+                
+              
+                
+                
+                
+              
+                
+                
+                
+              
+                
+                
+                
+              
+
+            
+          
+          
+
+        
+        
+
+      
+    
+    
+
+  
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">進階教學
+
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+          <h1 id="分割子領地"><a href="#分割子領地" class="headerlink" title="分割子領地"></a>分割子領地</h1><blockquote>
+<p>需要物品：<span class="label info">金鏟</span> x1 + <span class="label info">知道如何打指令的大腦</span> x1</p>
+</blockquote>
+<ul>
+<li>分割出來的子領地，可以獨立於主要領地，額外給與或移除其他玩家的領地權限。<ul>
+<li>例如花鑽石請人幫忙鋪地，可以把需要鋪地的範圍分割出一塊子領地，<br>只有子領地給與幫忙的玩家建築的領地權限。就可以保護好主領地上的建築和財產。</li>
+</ul>
+</li>
+</ul>
+<h2 id="步驟-1"><a href="#步驟-1" class="headerlink" title="步驟 1"></a>步驟 1</h2><p>在聊天視窗輸入 <code>/subdivideclaims</code> 進入子領地分割模式。成功的話聊天室會出現以下句子：</p>
+<ul>
+<li><div style="
+    background: rgba(1,1,1,.7);
+    padding: 2px 5px;
+    border-radius: .2em;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    color: #FFFF55;
+  ">Subdivsion mode. Use your shovel to create subdivsion in your exising claims. Use /basicClaims to exit.
+Click for Subdivsion Help: <span style="color: #55FFFF;">bit.ly/mcgpsub</span></div>
+
+</li>
+</ul>
+<h2 id="步驟-2"><a href="#步驟-2" class="headerlink" title="步驟 2"></a>步驟 2</h2><p>決定好在領地內的分割範圍，不能和其他子領地重疊。如圖中欲分割紅色框框的範圍</p>
+<div class="showimg"><img src="/uploads/griefprevention/subclaim_step2.png"></div>
+
+<h2 id="步驟-3"><a href="#步驟-3" class="headerlink" title="步驟 3"></a>步驟 3</h2><p>像新增領地一樣拿金鏟右鍵點擊對角線的兩端點的方塊。</p>
+<ul>
+<li>點第一下會出現：<ul>
+<li><div style="
+    background: rgba(1,1,1,.7);
+    padding: 2px 5px;
+    border-radius: .2em;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    color: #55FF55;
+  ">Subdivsion corner set! Use the location for the opposite corner of this new subdivsion.</div></li>
+</ul>
+</li>
+<li>點第二下會出現：<ul>
+<li><div style="
+    background: rgba(1,1,1,.7);
+    padding: 2px 5px;
+    border-radius: .2em;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    color: #55FF55;
+  ">subdivsion created! Use /trust to share it with friends</div>
+
+</li>
+</ul>
+</li>
+</ul>
+<div class="showimg"><img src="/uploads/griefprevention/subclaim_step3.png"></div>
+
+<h2 id="步驟-4"><a href="#步驟-4" class="headerlink" title="步驟 4"></a>步驟 4</h2><p>前面步驟都成功完成之後，會出現鐵磚和白色羊毛來標示子領地的大小（範圍），表示已經成功子劃設領地。</p>
+<ul>
+<li>如果沒看到鐵磚和白色羊毛標示範圍，可以先拿木棒右鍵點擊查詢領地看看是否成功。</li>
+<li>有成功劃設領地卻沒看到鐵磚和白色羊毛，可以先往上或往下看，有時候會出現在天空或地底的洞窟。</li>
+</ul>
+<div class="showimg"><img src="/uploads/griefprevention/subclaim_step4.png"></div>
+
+<h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><div class="note info">
+            <p>以上操作金鏟必須一直拿在手上，不可切換成其他物品，一但切掉就需要重新開始。</p><ul><li>換句話說，如果第一個點不小心點錯了或反悔不想設置領地，可以把金鏟切換掉重新來過。</li></ul>
+          </div>
+
+<h1 id="驅逐奇怪的玩家"><a href="#驅逐奇怪的玩家" class="headerlink" title="驅逐奇怪的玩家"></a>驅逐奇怪的玩家</h1><blockquote>
+<p>需要物品：<span class="label info">知道如何打指令的大腦</span> x1</p>
+</blockquote>
+<ul>
+<li>指令為：<code>/goc &lt;玩家ID&gt;</code>，驅逐自己所在領地範圍內的指定玩家</li>
+<li>被驅逐的玩家必須沒有任何該領地的權限，如果有，先使用 <code>/untrust &lt;玩家ID&gt;</code> 來移除該玩家在該領地上的領地權限。</li>
+</ul>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分割子領地"><span class="nav-text">分割子領地</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#步驟-1"><span class="nav-text">步驟 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步驟-2"><span class="nav-text">步驟 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步驟-3"><span class="nav-text">步驟 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步驟-4"><span class="nav-text">步驟 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事項"><span class="nav-text">注意事項</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#驅逐奇怪的玩家"><span class="nav-text">驅逐奇怪的玩家</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description">feelsogood.ddns.net</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        <a href="https://discordapp.com/invite/GvK5EKR" title="Discord &rarr; https://discordapp.com/invite/GvK5EKR" rel="noopener" target="_blank">Discord</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        <a href="https://www.facebook.com/828278847317176" title="Facebook &rarr; https://www.facebook.com/828278847317176" rel="noopener" target="_blank">Facebook</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">feelsogood admin</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+<script src="/js/utils.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
