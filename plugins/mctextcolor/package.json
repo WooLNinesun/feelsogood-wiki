@@ -1,0 +1,10 @@
+{
+  "name": "hexo-plugin-mccolor",
+  "version": "0.1.0",
+  "description": "make content color to minecraft color",
+  "main": "index",
+  "scripts": {},
+  "private": true,
+  "author": "WooLNinesun",
+  "license": "MIT"
+}

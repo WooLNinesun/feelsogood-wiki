@@ -1,0 +1,10 @@
+{
+  "name": "hexo-plugin-mctextbox",
+  "version": "0.1.0",
+  "description": "make content like minecraft chat style",
+  "main": "index",
+  "scripts": {},
+  "private": true,
+  "author": "WooLNinesun",
+  "license": "MIT"
+}

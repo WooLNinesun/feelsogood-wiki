@@ -1,0 +1,11 @@
+{
+  "name": "hexo-plugin-divbox",
+  "version": "0.1.0",
+  "description": "put child in custom div box",
+  "main": "index",
+  "scripts": {},
+  "private": true,
+  "author": "WooLNinesun",
+  "license": "MIT",
+  "dependencies": {}
+}
