@@ -157,7 +157,8 @@ baidu_push: false
 # External url should start with http:// or https://
 menu:
   最新消息: / || bullhorn
-  領地插件:
+  遊戲條款: /rules || gavel
+  領地系統:
       default: /griefprevention/ || flag
       基礎教學: /basic.html || flag
       領地權限: /permission.html || flag
@@ -365,8 +366,7 @@ related_posts:
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
   enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
-  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
+  url: https://github.com/WooLNinesun/feelsogood-wiki/edit/master/source/ # Link for view source
 
 
 # ---------------------------------------------------------------
