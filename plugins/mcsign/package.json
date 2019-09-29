@@ -1,0 +1,10 @@
+{
+  "name": "hexo-plugin-mcsign",
+  "version": "0.1.0",
+  "description": "make content in minecraft sign",
+  "main": "index",
+  "scripts": {},
+  "private": true,
+  "author": "WooLNinesun",
+  "license": "MIT"
+}

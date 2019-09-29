@@ -158,11 +158,20 @@ baidu_push: false
 menu:
   最新消息: / || bullhorn
   遊戲條款: /rules || gavel
+  指令列表: /commands || terminal
+  贊助資訊:
+      default: /sponsor || money
+      贊助回饋: /reward.html || star
+      感謝名單: /people.html || vcard
   領地系統:
       default: /griefprevention/ || flag
       基礎教學: /basic.html || flag
       領地權限: /permission.html || flag
       進階教學: /advanced.html || flag
+      相關資訊: /infos.html || flag
+  告示牌鎖:
+      default: /lockettepro/ || flag
+      基礎教學: /basic.html || flag
       相關資訊: /infos.html || flag
   #tags: /tags/ || tags
   #categories: /categories/ || th

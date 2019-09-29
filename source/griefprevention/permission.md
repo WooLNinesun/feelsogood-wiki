@@ -40,12 +40,12 @@ title: 領地權限
 * 步驟 2: 在聊天視窗輸入 `/trustlist`。
 * 步驟 3: 打完指令後聊天視窗就會顯示該領地權限列表。訊息大致上如下：
   * {% mctextbox defaultFontColor=aqua %}
+      領地權限列表：
       {% mclr gold   %}> [玩家名]{% endmclr %}
       {% mclr yellow %}> [玩家名]{% endmclr %}
       {% mclr green  %}> [玩家名]{% endmclr %}
       {% mclr blue   %}> [玩家名]{% endmclr %}
       {% mclr gold   %}管理{% endmclr %} {% mclr yellow %}建築{% endmclr %} {% mclr green  %}箱子{% endmclr %} {% mclr blue   %}操作{% endmclr %}
-      Explicit permissions here:
     {% endmctextbox %}
 
 # 給與領地權限

@@ -57,7 +57,7 @@ title: 基礎教學
 
 先確定好要保護的領地範圍，拿著金鏟右鍵選擇保護範圍角落的方塊作為第一個點。成功的話聊天室會出現以下句子：
 * {% mctextbox defaultFontColor=yellow %}
-    Claim corner set! Use the shovel again at the opposite corner to claim a rectangle of land. To cancel, put your shovel away.
+    領地劃設模式開始，已選取一角，請繼續拿著金鏟在想要劃設的矩形範圍的對角右鍵點擊即可完成領地劃設，如果要取消則放下金鏟即可。
   {% endmctextbox %}
 
 {% divbox showimg %}
@@ -95,7 +95,7 @@ title: 基礎教學
     {% endmctextbox %}
 * 想要劃設的領地長或寬的格數沒大於 5 格，聊天室會出現：
   * {% mctextbox defaultFontColor=red %}
-      This claim would be too small. Any claim must be at least 5 blocks wide.
+      想要劃設的領地寬度太小，領地任意邊長必須超過 5 格寬。
     {% endmctextbox %}
 {% endnote %}
 
@@ -120,7 +120,7 @@ title: 基礎教學
 先拿出木棒查詢領地範圍，拿著金鏟對擴張/縮小方向的螢光石點右鍵，被點擊的螢光石會消失表示成功選中。
 * 成功的話聊天室會出現以下句子：
   * {% mctextbox defaultFontColor=yellow %}
-      Resizing clam, Use your shovel again at the new location for this corner.
+      開始修改領地大小，使用金鏟點選新的矩形角來修改領地範圍。
     {% endmctextbox %}
 * 例如圖中想要往右下擴張領地兩格，就要拿著金鏟右鍵點擊右下角落的螢光石。（右 1）
 * 如果成功點中螢光石進入修改領地範圍模式，螢光石會消失，而不是出現鑽石磚。
@@ -129,7 +129,7 @@ title: 基礎教學
 
 完成步驟 1 在拿著金鏟右鍵點擊想要往外擴張或往內縮小的範圍（右 2），如圖。成功的話聊天室會出現以下句子：
 * {% mctextbox defaultFontColor=green %}
-    Claim resized. [ xxxxxx ] available claim blocks remaining
+    領定大小修改成功，您還剩下 [ xxxxxx ] 領地格可劃設領地。
   {% endmctextbox %}
 
 {% divbox showimg %}
@@ -166,6 +166,6 @@ title: 基礎教學
   * 步驟 2: 在聊天視窗輸入 `/abandonclaim`。
   * 步驟 3: 打完指令後領地就會被刪除了，成功會出現：
     * {% mctextbox defaultFontColor=green %}
-        Claim abandoned. You now have [ xxxxxx ] available claim block.
+        領地已刪除，您現在有 [ xxxxxx ] 領地格。
       {% endmctextbox %}
   * 金磚和螢光石可能會殘留在地上，都是暫時的，會自己消失。
