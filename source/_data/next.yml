@@ -157,10 +157,14 @@ baidu_push: false
 # External url should start with http:// or https://
 menu:
   最新消息: / || bullhorn
+  關於本服:
+      default: /info/ || info
+      歷史本文: /history.html || history
+      分流介紹: /diversion.html || server
   遊戲條款: /rules || gavel
   指令列表: /commands || terminal
   贊助資訊:
-      default: /sponsor || money
+      default: /sponsor/ || money
       贊助回饋: /reward.html || star
       感謝名單: /people.html || vcard
   領地系統:
@@ -170,9 +174,13 @@ menu:
       進階教學: /advanced.html || flag
       相關資訊: /infos.html || flag
   告示牌鎖:
-      default: /lockettepro/ || flag
-      基礎教學: /basic.html || flag
-      相關資訊: /infos.html || flag
+      default: /lockettepro/ || lock
+      基礎教學: /basic.html || lock
+      相關資訊: /infos.html || lock
+  商店系統:
+      default: /shopkeepers/ || shopping-basket
+      基礎教學: /basic.html || shopping-basket
+      相關資訊: /infos.html || shopping-basket
   #tags: /tags/ || tags
   #categories: /categories/ || th
   # archives: /archives/ || archive
